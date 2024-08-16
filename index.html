@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+         .main_container {
+            height: 100vh;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 50px auto 50px;
+        grid-template-areas:
+          "nav nav nav"
+          "sidebar main main"
+          "footer footer footer";
+        gap: 20px;
+        background-color: rgb(214, 230, 235);
+      }
+      
+      .nav { grid-area: nav;}
+      .sidebar {grid-area: sidebar;}
+      .main {grid-area: main;}
+      .footer {grid-area: footer;}
+
+      .nav, .footer,.main, .sidebar {
+        background-color: rgb(178, 216, 216);
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main_container">
+      <nav class="nav">nav</nav>
+      <aside class="sidebar" id="sidebar">sidebar</aside>
+      <main class="main" id="main">main</main>
+      <footer class="footer">footer</footer>
+    </div>
+    <script src="./index.js"></script>
+    <script src="./Dashboard.js"></script>
+    <script src="./Profile.js"></script>
+    <script src="./About.js"></script>
+    <script src="./Contact.js"></script>
+    <script src="./Help.js"></script>
+  </body>
+ 
+</html>
